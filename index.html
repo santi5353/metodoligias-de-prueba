@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Alerta de Emergencias</title>
+  <link rel="stylesheet" href="style.css">
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <style>
+ 
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Puedes agregar más opciones de menú aquí -->
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Emergencias</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <!-- Opción "Salir" -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Salir</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="card-container">    
+  <div class="container mt-5">
+    <div class="title-container">
+      <img src="/img/sirena.png" class="" style="width: 70px;" alt="">
+      <h1>Ingrese su Emergencia</h1>
+      <img src="/img/sirena.png" class="" style="width: 70px;" alt="">
+    </div>
+
+    <!-- Formulario de registro de emergencia -->
+    <div class="row">
+      <div class="card m-5 col-md-6 col-12">
+        <form id="registroForm">
+          <div class="form-group m-4">
+            <label for="tipoEmergencia">Tipo de Emergencia:</label>
+            <select class="form-control" id="tipoEmergencia" required>
+              <option value="" disabled selected>Selecciona una emergencia</option>
+              <option value="Incendio">Incendio</option>
+              <option value="Inundación">Inundación</option>
+              <option value="Accidente de Tráfico">Accidente de Tráfico</option>
+              <option value="Deslizamiento de Tierra">Deslizamiento de Tierra</option>
+              <option value="Fuga de Gas">Fuga de Gas</option>
+              <option value="Intervención Policial">Intervención Policial</option>
+              <option value="Robo o Asalto">Robo o Asalto</option>
+              <option value="Enfermedad Epidémica">Enfermedad Epidémica</option>
+              <!-- Agrega más opciones según sea necesario -->
+            </select>
+          </div>
+          <div class="form-group m-4">
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" class="form-control" id="ubicacion" placeholder="Ej. Latitud, Longitud" required>
+          </div>
+          <div class="container text-center col-10 m-3">
+            <button type="submit" id="btnRegistrar" class="btn btn-danger">Registrar Emergencia</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-4">
+        <img src="/img/contacto-de-emergencia.png" class="mt-5 d-none d-md-block" style="width: 300px;" alt="">
+      </div>
+    </div> 
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- Tu script de JavaScript para manejar la lógica de la interfaz -->
+<script src="app.js"></script>
+</body>
+</html>
